@@ -1,1 +1,82 @@
-# Gradient Boosting / XGBoost
+import pandas as pd
+import numpy as np
+from xgboost import XGBRegressor
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+import joblib
+
+def charger_donnees(chemin='data/dataset_simule.csv'):
+    df = pd.read_csv(chemin)
+    X = df.drop(columns=['frequentation', 'date'])
+    y = df['frequentation']
+    return X, y
+
+def construire_pipeline():
+    cat_features = ['jour_semaine']
+    num_features = ['mois', 'heure', 'est_jour_ferie', 'est_weekend', 'est_vacances_scolaires']
+
+    preprocessor = ColumnTransformer(transformers=[
+        ('cat', OneHotEncoder(drop='first', sparse_output=False), cat_features),
+        ('num', 'passthrough', num_features)
+    ])
+
+    pipeline = Pipeline(steps=[
+        ('preprocessor', preprocessor),
+        ('model', XGBRegressor(
+            n_estimators=300,
+            max_depth=6,
+            learning_rate=0.05,
+            subsample=0.8,
+            colsample_bytree=0.8,
+            random_state=42,
+            n_jobs=-1
+        ))
+    ])
+    return pipeline
+
+def entrainer_et_evaluer(chemin='data/dataset_simule.csv'):
+    X, y = charger_donnees(chemin)
+
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=42
+    )
+
+    pipeline = construire_pipeline()
+    pipeline.fit(X_train, y_train)
+
+    y_pred = pipeline.predict(X_test)
+
+    r2   = r2_score(y_test, y_pred)
+    mae  = mean_absolute_error(y_test, y_pred)
+    rmse = np.sqrt(mean_squared_error(y_test, y_pred))
+
+    print("=" * 40)
+    print("            XGBOOST")
+    print("=" * 40)
+    print(f"  R²   : {r2:.4f}")
+    print(f"  MAE  : {mae:,.0f} passagers")
+    print(f"  RMSE : {rmse:,.0f} passagers")
+    print("=" * 40)
+
+    # Importance des features
+    feature_names = (
+        pipeline.named_steps['preprocessor']
+        .get_feature_names_out()
+    )
+    importances = pipeline.named_steps['model'].feature_importances_
+    feat_imp = pd.Series(importances, index=feature_names).sort_values(ascending=False)
+
+    print("\nImportance des variables :")
+    print(feat_imp.round(4))
+
+    # Sauvegarde
+    joblib.dump(pipeline, 'models/xgboost.pkl')
+    print("\n  Modèle sauvegardé : models/xgboost.pkl")
+
+    return pipeline, {'r2': r2, 'mae': mae, 'rmse': rmse}
+
+if __name__ == '__main__':
+    entrainer_et_evaluer()
