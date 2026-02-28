@@ -73,7 +73,7 @@ def evaluer(modele, X_test, y_test, nom):
     return {'r2': r2, 'mae': mae, 'rmse': rmse}
 
 if __name__ == '__main__':
-    X, y = charger_donnees()
+    X, y = charger_donnees('data/dataset_ter_dakar_2022_2026.csv')
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.2, random_state=42
     )

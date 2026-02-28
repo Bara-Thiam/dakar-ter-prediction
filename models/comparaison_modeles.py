@@ -14,7 +14,7 @@ from models.model_regression import charger_donnees, construire_pipeline as pipe
 from models.model_random_forest import construire_pipeline as pipeline_rf
 from models.model_xgboost import construire_pipeline as pipeline_xgboost
 
-def comparer_modeles(chemin='data/dataset_simule.csv'):
+def comparer_modeles(chemin='data/dataset_ter_dakar_2022_2026.csv'):
     X, y = charger_donnees(chemin)
 
     X_train, X_test, y_train, y_test = train_test_split(
