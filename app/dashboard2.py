@@ -33,21 +33,27 @@ st.markdown("""
         font-size: 1.3rem !important;
         color: rgba(250, 250, 250, 0.6) !important;
     }
+            
+    /* ── LOGO TER ── */        
+    [data-testid="stSidebar"] img {
+        filter: brightness(0) invert(1) !important;
+    }        
+
     /* ── Base ── */
     html, body, [class*="css"] {
         font-family: 'Plus Jakarta Sans', sans-serif !important;
     }
     .stApp {
-        background-color: #FAF5F0;
+        background-color: #F0F4F0;
     }
 
     /* ── Sidebar ── */
     [data-testid="stSidebar"] {
-        background: #3D0A14 !important;
-        border-right: 1px solid #5a1020;
+        background: #0A2E0F !important;
+        border-right: 1px solid #1a4a20;
     }
     [data-testid="stSidebar"] * {
-        color: #FAF0E6 !important;
+        color: #E8F5E9 !important;
         font-family: 'Plus Jakarta Sans', sans-serif !important;
     }
     [data-testid="stSidebar"] hr {
@@ -67,12 +73,12 @@ st.markdown("""
 
     /* ── Header ── */
     .main-header {
-        background: linear-gradient(135deg, #3D0A14 0%, #6D1A28 55%, #7B1C2A 100%);
+        background: linear-gradient(135deg, #0A2E0F 0%, #1B5E20 55%, #2E7D32 100%);
         padding: 2rem 2.5rem;
         border-radius: 20px;
         color: white;
         margin-bottom: 2rem;
-        box-shadow: 0 12px 40px rgba(61,10,20,0.25);
+        box-shadow: 0 12px 40px rgba(10,46,15,0.25);
         position: relative;
         overflow: hidden;
     }
@@ -114,7 +120,7 @@ st.markdown("""
         padding: 0.2rem 0.8rem;
         font-size: 0.75rem;
         font-weight: 600;
-        color: #D4B86A;
+        color: #A5D6A7;
         margin-bottom: 0.8rem;
         letter-spacing: 1px;
         text-transform: uppercase;
@@ -127,7 +133,7 @@ st.markdown("""
         border-radius: 16px;
         padding: 1.4rem 1.2rem;
         box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-        border: 1px solid rgba(123,28,42,0.08);
+        border: 1px solid rgba(46,125,50,0.08);
         position: relative;
         overflow: hidden;
     }
@@ -136,7 +142,7 @@ st.markdown("""
         position: absolute;
         top: 0; left: 0; right: 0;
         height: 3px;
-        background: linear-gradient(90deg, #7B1C2A, #C4A55A);
+        background: linear-gradient(90deg, #2E7D32, #66BB6A);
         border-radius: 16px 16px 0 0;
     }
     .kpi-icon {
@@ -147,7 +153,7 @@ st.markdown("""
     .kpi-value {
         font-size: 1.75rem;
         font-weight: 800;
-        color: #3D0A14;
+        color: #0A2E0F;
         line-height: 1;
         letter-spacing: -0.5px;
         font-family: 'DM Mono', monospace !important;
@@ -169,7 +175,7 @@ st.markdown("""
         display: inline-block;
     }
     .delta-neg { background: #FFEBEE; color: #C62828; }
-    .delta-pos { background: #FAF0E6; color: #6D1A28; }
+    .delta-pos { background: #E8F5E9; color: #2E7D32; }
 
     /* ── Section titles ── */
     .section-title {
@@ -180,17 +186,17 @@ st.markdown("""
         margin-bottom: 1.2rem;
         text-transform: uppercase;
         letter-spacing: 1.2px;
-        border-bottom: 1px solid #E8DDD0;
+        border-bottom: 1px solid #E0E7E0;
     }
 
     /* ── Prediction Box ── */
     .pred-box {
-        background: #3D0A14;
+        background: #0A2E0F;
         color: white;
         border-radius: 20px;
         padding: 2.2rem 2rem;
         text-align: center;
-        box-shadow: 0 16px 50px rgba(61,10,20,0.25);
+        box-shadow: 0 16px 50px rgba(10,46,15,0.25);
         position: relative;
         overflow: hidden;
     }
@@ -235,8 +241,8 @@ st.markdown("""
         letter-spacing: 0.5px;
     }
     .badge-high   { background: rgba(198,40,40,0.2);  color: #FFCDD2; border: 1px solid rgba(198,40,40,0.3); }
-    .badge-medium { background: rgba(196,165,90,0.2); color: #F5EDD8; border: 1px solid rgba(196,165,90,0.3); }
-    .badge-low    { background: rgba(109,26,40,0.2);  color: #F0E0C0; border: 1px solid rgba(109,26,40,0.3); }
+    .badge-medium { background: rgba(249,168,37,0.2); color: #FFF9C4; border: 1px solid rgba(249,168,37,0.3); }
+    .badge-low    { background: rgba(46,125,50,0.2);  color: #C8E6C9; border: 1px solid rgba(46,125,50,0.3); }
 
     /* ── Form Cards ── */
     .form-card {
@@ -244,7 +250,7 @@ st.markdown("""
         border-radius: 16px;
         padding: 1.5rem;
         box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-        border: 1px solid rgba(123,28,42,0.08);
+        border: 1px solid rgba(46,125,50,0.08);
         margin-bottom: 1rem;
     }
     .form-card-title {
@@ -255,14 +261,14 @@ st.markdown("""
         letter-spacing: 1px;
         margin-bottom: 1rem;
         padding-bottom: 0.5rem;
-        border-bottom: 1px solid #FAF5F0;
+        border-bottom: 1px solid #F0F4F0;
     }
 
     /* ── Buttons ── */
     .stButton > button {
-        background: #6D1A28 !important;
+        background: #1B5E20 !important;
         color: #FFFFFF !important;
-        border: 2px solid #C4A55A !important;
+        border: 2px solid #4CAF50 !important;
         border-radius: 12px !important;
         font-weight: 700 !important;
         font-size: 0.9rem !important;
@@ -273,10 +279,10 @@ st.markdown("""
         text-shadow: none !important;
     }
     .stButton > button:hover {
-        background: #7B1C2A !important;
-        border-color: #D4B86A !important;
+        background: #2E7D32 !important;
+        border-color: #66BB6A !important;
         transform: translateY(-1px) !important;
-        box-shadow: 0 6px 20px rgba(61,10,20,0.3) !important;
+        box-shadow: 0 6px 20px rgba(10,46,15,0.3) !important;
     }
     .stButton > button p {
         color: #FFFFFF !important;
@@ -284,7 +290,7 @@ st.markdown("""
     }
 
     /* ── Status badge ── */
-    .status-ok   { background: rgba(109,26,40,0.15); border: 1px solid rgba(196,165,90,0.4); border-radius: 8px; padding: 0.5rem 0.8rem; font-size: 0.8rem; font-weight: 600; }
+    .status-ok   { background: rgba(46,125,50,0.15); border: 1px solid rgba(46,125,50,0.3); border-radius: 8px; padding: 0.5rem 0.8rem; font-size: 0.8rem; font-weight: 600; }
     .status-demo { background: rgba(249,168,37,0.15); border: 1px solid rgba(249,168,37,0.3); border-radius: 8px; padding: 0.5rem 0.8rem; font-size: 0.8rem; font-weight: 600; }
 
     /* ── Inputs ── */
@@ -298,7 +304,7 @@ st.markdown("""
     .stTabs [data-baseweb="tab-list"] {
         gap: 0.5rem;
         background: transparent;
-        border-bottom: 1px solid #E8DDD0;
+        border-bottom: 1px solid #E0E7E0;
     }
     .stTabs [data-baseweb="tab"] {
         border-radius: 8px 8px 0 0 !important;
@@ -308,7 +314,7 @@ st.markdown("""
     }
     .stTabs [aria-selected="true"] {
         background: white !important;
-        color: #6D1A28 !important;
+        color: #1B5E20 !important;
     }
 
     /* ── Dataframe ── */
@@ -317,7 +323,7 @@ st.markdown("""
     /* ── General text ── */
     p, label, .stMarkdown { color: #263238; }
 
-    hr { border-color: #E8DDD0 !important; }
+    hr { border-color: #E0E7E0 !important; }
 
     /* ── Toggles inactifs ── */
     div.st-au.st-bx {
@@ -332,11 +338,11 @@ st.markdown("""
     /* ── Expander ── */
     [data-testid="stExpander"] {
         background: white !important;
-        border: 1px solid #E8DDD0 !important;
+        border: 1px solid #E0E7E0 !important;
         border-radius: 12px !important;
     }
     [data-testid="stExpander"] summary {
-        color: #6D1A28 !important;
+        color: #1B5E20 !important;
         font-weight: 600 !important;
     }
     [data-testid="stExpander"] details {
@@ -365,14 +371,7 @@ def load_model_results():
     base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     path = os.path.join(base, "docs", "comparaison_resultats.csv")
     if os.path.exists(path):
-        df = pd.read_csv(path)
-        # Normaliser les noms de colonnes (R² → R2, Modèle → Modele, etc.)
-        df.columns = (df.columns
-                      .str.replace("²", "2", regex=False)
-                      .str.replace("è", "e", regex=False)
-                      .str.replace("é", "e", regex=False)
-                      .str.strip())
-        return df
+        return pd.read_csv(path)
     return pd.DataFrame({
         "Modele": ["Regression Lineaire", "Random Forest", "XGBoost"],
         "R2":     [0.1961, 0.9685, 0.9771],
@@ -442,13 +441,13 @@ LAYOUT = dict(
     font=dict(color="#263238", family="Plus Jakarta Sans"),
     margin=dict(l=10, r=10, t=40, b=10),
     xaxis=dict(color="#546E7A", tickfont=dict(color="#546E7A", size=11),
-               title=dict(font=dict(color="#546E7A")), gridcolor="#FAF5F0",
-               linecolor="#E8DDD0"),
+               title=dict(font=dict(color="#546E7A")), gridcolor="#F0F4F0",
+               linecolor="#E0E7E0"),
     yaxis=dict(color="#546E7A", tickfont=dict(color="#546E7A", size=11),
-               title=dict(font=dict(color="#546E7A")), gridcolor="#FAF5F0",
-               linecolor="#E8DDD0"),
+               title=dict(font=dict(color="#546E7A")), gridcolor="#F0F4F0",
+               linecolor="#E0E7E0"),
     hoverlabel=dict(bgcolor="white", font=dict(color="#263238",
-               family="Plus Jakarta Sans"), bordercolor="#E8DDD0"),
+               family="Plus Jakarta Sans"), bordercolor="#E0E7E0"),
     legend=dict(font=dict(color="#263238")),
 )
 
@@ -464,7 +463,7 @@ with st.sidebar:
     with col_logo2:
         st.image(logo_path, width=120)
     st.markdown("""
-    <div style='text-align:center; font-size:0.65rem; color:#C4A55A; font-weight:600;
+    <div style='text-align:center; font-size:0.65rem; color:#81C784; font-weight:600;
                 letter-spacing:3px; margin-bottom:0.5rem;
                 font-family: Plus Jakarta Sans, sans-serif;'>
         TABLEAU DE BORD IA
@@ -512,7 +511,7 @@ if page == "Accueil et KPIs":
     ]
     for col, icon, val, label, delta in cards:
         with col:
-            color = "#C62828" if (delta and ferie_ratio < 0 and label.startswith("Jours")) else "#3D0A14"
+            color = "#C62828" if (delta and ferie_ratio < 0 and label.startswith("Jours")) else "#0A2E0F"
             st.markdown(f"""
             <div class="kpi-card">
                 <span class="kpi-icon">{icon}</span>
@@ -527,14 +526,14 @@ if page == "Accueil et KPIs":
     st.markdown('<div class="section-title">Évolution annuelle du trafic</div>', unsafe_allow_html=True)
     yearly = df.groupby("annee")["frequentation"].sum().reset_index()
     fig_y  = px.bar(yearly, x="annee", y="frequentation",
-                    color_discrete_sequence=["#7B1C2A"],
+                    color_discrete_sequence=["#2E7D32"],
                     template="plotly_white",
                     labels={"annee": "Année", "frequentation": "Total voyageurs"},
                     text="frequentation")
     fig_y.update_traces(texttemplate="%{text:,.0f}", textposition="outside",
                         textfont=dict(color="#263238", size=11),
                         marker_line_width=0, marker_opacity=0.9,
-                        marker_color=["#F0E0C0","#D4B86A","#C4A55A","#8B2030","#6D1A28"])
+                        marker_color=["#A5D6A7","#66BB6A","#43A047","#2E7D32","#1B5E20"])
     fig_y.update_layout(height=300, bargap=0.35, **LAYOUT)
     st.plotly_chart(fig_y, use_container_width=True)
 
@@ -545,7 +544,7 @@ if page == "Accueil et KPIs":
         by_day = df.groupby("jour_semaine")["frequentation"].mean().reindex(order).reset_index()
         fig_d  = px.bar(by_day, x="jour_semaine", y="frequentation",
                         color="frequentation",
-                        color_continuous_scale=["#F0E0C0","#6D1A28"],
+                        color_continuous_scale=["#C8E6C9","#1B5E20"],
                         template="plotly_white",
                         labels={"frequentation":"Freq. moy.","jour_semaine":""})
         fig_d.update_traces(marker_line_width=0)
@@ -562,7 +561,7 @@ if page == "Accueil et KPIs":
             greve_row = pd.DataFrame({"perturbation": [3], "frequentation": [int(normal * 0.20)]})
             by_pert = pd.concat([by_pert, greve_row], ignore_index=True)
         by_pert["label"] = by_pert["perturbation"].map(pert_labels)
-        colors_pert = ["#6D1A28","#F57F17","#1565C0","#C62828"][:len(by_pert)]
+        colors_pert = ["#2E7D32","#F57F17","#1565C0","#C62828"][:len(by_pert)]
         fig_pert = px.bar(by_pert, x="label", y="frequentation",
                           color="label",
                           color_discrete_sequence=colors_pert,
@@ -660,25 +659,25 @@ elif page == "Prédiction":
                     preds.append(v)
 
             current = f"{heure}h{minute:02d}"
-            colors  = ["#C62828" if l == current else "#7B1C2A" for l in labels]
+            colors  = ["#C62828" if l == current else "#2E7D32" for l in labels]
             sizes   = [12 if l == current else 7 for l in labels]
 
             fig_h = go.Figure()
             fig_h.add_trace(go.Scatter(
                 x=labels, y=preds, mode="lines+markers",
-                line=dict(color="#7B1C2A", width=2.5, shape="spline"),
+                line=dict(color="#2E7D32", width=2.5, shape="spline"),
                 marker=dict(color=colors, size=sizes,
                             line=dict(color="white", width=1.5)),
-                fill="tozeroy", fillcolor="rgba(123,28,42,0.06)",
+                fill="tozeroy", fillcolor="rgba(46,125,50,0.06)",
                 hovertemplate="<b>%{x}</b><br>%{y:,} voyageurs<extra></extra>"
             ))
-            fig_h.add_vline(x=current, line_dash="dot", line_color="#C4A55A", line_width=2)
+            fig_h.add_vline(x=current, line_dash="dot", line_color="#C8E6C9", line_width=2)
             fig_h.update_layout(
                 height=300, showlegend=False,
                 xaxis=dict(tickangle=45, tickfont=dict(size=9), color="#546E7A",
-                           gridcolor="#FAF5F0", title=dict(font=dict(color="#546E7A"))),
+                           gridcolor="#F0F4F0", title=dict(font=dict(color="#546E7A"))),
                 yaxis=dict(color="#546E7A", tickfont=dict(color="#546E7A", size=11),
-                           gridcolor="#FAF5F0", title="Voyageurs",
+                           gridcolor="#F0F4F0", title="Voyageurs",
                            title_font=dict(color="#546E7A")),
                 **{k:v for k,v in LAYOUT.items() if k not in ["xaxis","yaxis"]}
             )
@@ -686,9 +685,9 @@ elif page == "Prédiction":
         else:
             st.markdown("""
             <div style="background:white; border-radius:16px; padding:3rem 2rem;
-                        text-align:center; border:1px dashed #D4B86A; margin-top:1rem">
+                        text-align:center; border:1px dashed #C8E6C9; margin-top:1rem">
                 <div style="font-size:2.5rem; margin-bottom:1rem">🔮</div>
-                <div style="font-weight:700; color:#3D0A14; font-size:1rem">
+                <div style="font-weight:700; color:#0A2E0F; font-size:1rem">
                     Configurez les paramètres
                 </div>
                 <div style="color:#78909C; font-size:0.85rem; margin-top:0.4rem">
@@ -715,7 +714,7 @@ elif page == "Prédiction":
         index=range(5,24)
     )
     fig_hm = px.imshow(matrix.T,
-                       color_continuous_scale=["#FDF6EC","#D4B86A","#7B1C2A","#3D0A14"],
+                       color_continuous_scale=["#F1F8E9","#66BB6A","#1B5E20","#0A2E0F"],
                        labels=dict(x="Heure", y="Jour", color="Voyageurs"),
                        aspect="auto", template="plotly_white")
     fig_hm.update_layout(height=320, **LAYOUT)
@@ -734,10 +733,10 @@ elif page == "Analyses":
                        line=dict(width=0), showlegend=False),
             go.Scatter(x=bh["heure"], y=bh["mean"]-bh["std"], mode="lines",
                        line=dict(width=0), fill="tonexty",
-                       fillcolor="rgba(123,28,42,0.10)", showlegend=False),
+                       fillcolor="rgba(46,125,50,0.10)", showlegend=False),
             go.Scatter(x=bh["heure"], y=bh["mean"], mode="lines+markers",
-                       line=dict(color="#6D1A28", width=3, shape="spline"),
-                       marker=dict(size=8, color="#8B2030",
+                       line=dict(color="#1B5E20", width=3, shape="spline"),
+                       marker=dict(size=8, color="#43A047",
                                    line=dict(color="white", width=2)),
                        name="Fréquentation moyenne",
                        hovertemplate="<b>%{x}h</b><br>%{y:,.0f} voyageurs<extra></extra>"),
@@ -752,7 +751,7 @@ elif page == "Analyses":
         bm["mois_nom"] = bm["mois"].map(dict(enumerate(MOIS_LABELS, 1)))
         fig_mo = px.bar(bm, x="mois_nom", y="frequentation", color="annee",
                         barmode="group", template="plotly_white",
-                        color_discrete_sequence=["#F0E0C0","#D4B86A","#C4A55A","#8B2030","#6D1A28"],
+                        color_discrete_sequence=["#A5D6A7","#66BB6A","#43A047","#2E7D32","#1B5E20"],
                         labels={"frequentation":"Total voyageurs","mois_nom":"Mois","annee":"Année"},
                         title="Fréquentation mensuelle par année")
         fig_mo.update_traces(marker_line_width=0)
@@ -763,7 +762,7 @@ elif page == "Analyses":
         order = ["lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"]
         pivot = df.groupby(["jour_semaine","heure"])["frequentation"].mean().unstack("heure").reindex(order)
         fig_hm2 = px.imshow(pivot,
-                             color_continuous_scale=["#FDF6EC","#D4B86A","#7B1C2A","#3D0A14"],
+                             color_continuous_scale=["#F1F8E9","#66BB6A","#1B5E20","#0A2E0F"],
                              labels=dict(x="Heure", y="Jour", color="Freq. moy."),
                              aspect="auto", template="plotly_white",
                              title="Heatmap · Fréquentation par jour et heure")
@@ -777,7 +776,7 @@ elif page == "Analyses":
         by_ev["delta"] = (by_ev["frequentation"] / by_ev[by_ev["evenement_religieux"]==0]["frequentation"].values[0] - 1) * 100
         fig_ev = px.bar(by_ev, x="label", y="frequentation",
                         color="delta",
-                        color_continuous_scale=["#F0E0C0","#8B2030","#6D1A28"],
+                        color_continuous_scale=["#C8E6C9","#43A047","#1B5E20"],
                         template="plotly_white",
                         labels={"frequentation":"Freq. moy.","label":""},
                         title="Impact des événements religieux sur la fréquentation",
@@ -801,7 +800,7 @@ elif page == "Modèles ML":
         with c1:
             fig_r2 = px.bar(model_results, x="Modele", y="R2",
                             color="Modele",
-                            color_discrete_sequence=["#F0E0C0","#8B2030","#6D1A28"],
+                            color_discrete_sequence=["#A5D6A7","#43A047","#1B5E20"],
                             template="plotly_white", title="Score R²", text="R2")
             fig_r2.update_traces(texttemplate="%{text:.4f}", textposition="outside",
                                   textfont=dict(color="#263238"), marker_line_width=0)
@@ -813,7 +812,7 @@ elif page == "Modèles ML":
                                          var_name="Metrique", value_name="Erreur")
             fig_err = px.bar(df_melt, x="Modele", y="Erreur", color="Metrique",
                              barmode="group",
-                             color_discrete_sequence=["#C4A55A","#E53935"],
+                             color_discrete_sequence=["#F9A825","#E53935"],
                              template="plotly_white", title="Erreurs MAE et RMSE")
             fig_err.update_traces(marker_line_width=0)
             fig_err.update_layout(height=350, bargap=0.3, **LAYOUT)
@@ -823,16 +822,8 @@ elif page == "Modèles ML":
     st.markdown('<div class="section-title">Tableau récapitulatif</div>', unsafe_allow_html=True)
     st.dataframe(model_results, use_container_width=True, hide_index=True)
 
-    # Détection automatique des noms de colonnes du CSV
-    r2_col  = next((c for c in model_results.columns if c.replace("²","2").replace("^2","2").upper().strip() == "R2"), None)
-    mae_col = next((c for c in model_results.columns if "MAE" in c.upper()), None)
-    mod_col = next((c for c in model_results.columns if "MOD" in c.upper()), model_results.columns[0])
-    if r2_col is None:
-        st.warning(f"⚠️ Colonnes détectées dans le CSV : {list(model_results.columns)}")
-    else:
-        best = model_results.loc[model_results[r2_col].idxmax()]
-        mae_val = f"{int(best[mae_col]):,}" if mae_col else "N/A"
-        st.success(f"✅ Meilleur modèle : **{best[mod_col]}** — R² = {best[r2_col]:.4f} | MAE = {mae_val} voyageurs / 30 min")
+    best = model_results.loc[model_results["R2"].idxmax()]
+    st.success(f"✅ Meilleur modèle : **{best['Modele']}** — R² = {best['R2']:.4f} | MAE = {int(best['MAE']):,} voyageurs / 30 min")
 
     with st.expander("📖 Interprétation des métriques"):
         st.markdown("""
