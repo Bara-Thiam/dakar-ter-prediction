@@ -62,8 +62,8 @@ projet-ter-ia/
 | Membre | Rôle | Responsabilités |
 |--------|------|-----------------|
 | **Bara** | Chef de projet & ML Engineer | Dataset, modèles ML, API, coordination |
-| **Membre 2** | Data Analyst | Collecte données, EDA, visualisations |
-| **Membre 3** | Développeur Interface | Dashboard Streamlit, PowerPoint |
+| **Mactar** | Data Analyst | Collecte données, EDA, visualisations |
+| **Joanelle** | Développeur Interface | Dashboard Streamlit, PowerPoint |
 
 ---
 
