@@ -443,7 +443,7 @@ elif page == "Prédiction":
             st.session_state.p_jour    = "vendredi"
             st.session_state.p_annee   = 2025
             st.session_state.p_mois    = 11
-            st.session_state.p_heure   = 10
+            st.session_state.p_heure   = 8
             st.session_state.p_minute  = 0
             st.session_state.p_ferie   = False
             st.session_state.p_vacances= False
