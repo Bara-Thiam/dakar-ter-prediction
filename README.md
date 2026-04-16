@@ -174,4 +174,4 @@ pillow
 
 ---
 
-*Projet Data Science — Equipe TER — Mars 2026*
+*Projet Machine learning — Equipe TER — Mars 2026*
